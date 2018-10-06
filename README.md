@@ -3,6 +3,12 @@
 
 ## Development
 
+Set some environment variables and add yawc to your Python path:
+
+    export SECRET_KEY=somelongrandomsecret
+    export DATABASE_URL=postgresql://postgres@127.0.0.1:5432
+    export PYTHONPATH=$PYTHONPATH:/path/to/yawcrepodir
+
 Install Python dependencies:
 
     pipenv install
@@ -45,7 +51,7 @@ currently is no redirect in place for non-authenticated users.
 
 To create a new user:
 
-    pipenv run python -m yawc user 'myuser@example.com'
+    pipenv run python -m yawc user create 'myuser@example.com'
 
 
 To list users:
